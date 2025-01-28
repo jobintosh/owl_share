@@ -1,0 +1,36 @@
+CRITICAL - 2025-01-15 23:41:11 --> Call to undefined method App\Controllers\Post::validateCSRFToken()
+#0 /var/www/html/owl_share/system/CodeIgniter.php(936): App\Controllers\Post->reaction()
+#1 /var/www/html/owl_share/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /var/www/html/owl_share/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/owl_share/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2025-01-15 23:41:42 --> Call to undefined method App\Controllers\Post::validateCSRFToken()
+#0 /var/www/html/owl_share/system/CodeIgniter.php(936): App\Controllers\Post->reaction()
+#1 /var/www/html/owl_share/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /var/www/html/owl_share/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/owl_share/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2025-01-15 23:41:43 --> Call to undefined method App\Controllers\Post::validateCSRFToken()
+#0 /var/www/html/owl_share/system/CodeIgniter.php(936): App\Controllers\Post->reaction()
+#1 /var/www/html/owl_share/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /var/www/html/owl_share/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/owl_share/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2025-01-15 23:42:12 --> Call to undefined method App\Controllers\Post::validateCSRFToken()
+#0 /var/www/html/owl_share/system/CodeIgniter.php(936): App\Controllers\Post->reaction()
+#1 /var/www/html/owl_share/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /var/www/html/owl_share/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/owl_share/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2025-01-15 23:42:51 --> Call to undefined method App\Controllers\Post::validateCSRFToken()
+#0 /var/www/html/owl_share/system/CodeIgniter.php(936): App\Controllers\Post->reaction()
+#1 /var/www/html/owl_share/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /var/www/html/owl_share/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/owl_share/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2025-01-15 23:43:00 --> Call to undefined method App\Controllers\Post::validateCSRFToken()
+#0 /var/www/html/owl_share/system/CodeIgniter.php(936): App\Controllers\Post->reaction()
+#1 /var/www/html/owl_share/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Post))
+#2 /var/www/html/owl_share/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/owl_share/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}

@@ -1,0 +1,259 @@
+/* Share Page Styles */
+
+/* Content Type Tabs */
+.nav-tabs {
+    border-bottom: 2px solid #e9ecef;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    padding: 0.75rem 1rem;
+    color: #6c757d;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+    border-color: transparent;
+    color: #0d6efd;
+}
+
+.nav-tabs .nav-link.active {
+    border-bottom-color: #0d6efd;
+    color: #0d6efd;
+    background: none;
+}
+
+/* Whiteboard Tools */
+.whiteboard-container {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: 1rem;
+}
+
+.whiteboard-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.whiteboard-tools .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.whiteboard-tools .btn.active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* Gallery Upload */
+.dropzone-container {
+    border: 2px dashed #dee2e6;
+    border-radius: 0.375rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dropzone-container:hover,
+.dropzone-container.dragover {
+    background-color: #e9ecef;
+    border-color: #0d6efd;
+}
+
+.image-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.preview-item {
+    position: relative;
+    padding-top: 100%;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.preview-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.preview-item:hover img {
+    transform: scale(1.05);
+}
+
+.preview-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.preview-item:hover .preview-controls {
+    opacity: 1;
+}
+
+/* Tags Input */
+.tag-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    margin: 0.25rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.tag-badge:hover {
+    background-color: #dee2e6;
+}
+
+.tag-badge .btn-close {
+    font-size: 0.75rem;
+    padding: 0.25rem;
+}
+
+/* Recent Posts */
+.shared-item {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.shared-item:hover {
+    transform: translateY(-2px);
+}
+
+.post-meta {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.post-content {
+    margin: 1rem 0;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.375rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Comments Section */
+.comments-section {
+    background-color: #f8f9fa;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.comment-form {
+    margin-top: 1rem;
+}
+
+.comment-form .input-group {
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.comment-form input {
+    border: none;
+    padding: 0.75rem 1rem;
+}
+
+.comment-form button {
+    border-radius: 0;
+    padding: 0.75rem 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.shared-item {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .whiteboard-tools {
+        justify-content: center;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .gallery-item img {
+        height: 120px;
+    }
+    
+    .post-meta {
+        flex-direction: column;
+    }
+}

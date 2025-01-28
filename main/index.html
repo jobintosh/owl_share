@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบ่งปันข้อมูล - ShareHub</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- TinyMCE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.0/tinymce.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <i class="fas fa-share-alt me-2"></i>ShareHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">
+                            <i class="fas fa-home"></i> หน้าแรก
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-plus-circle"></i> แบ่งปันข้อมูล
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user"></i> โปรไฟล์
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Share Form -->
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-share-alt me-2"></i>แบ่งปันข้อมูล
+                        </h5>
+                        
+                        <!-- Content Type Tabs -->
+                        <ul class="nav nav-tabs mb-3" id="contentTypeTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="text-tab" data-bs-toggle="tab" 
+                                        data-bs-target="#text" type="button" role="tab">
+                                    <i class="fas fa-pen"></i> เขียนข้อความ
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="whiteboard-tab" data-bs-toggle="tab" 
+                                        data-bs-target="#whiteboard" type="button" role="tab">
+                                    <i class="fas fa-paint-brush"></i> วาดภาพ
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="gallery-tab" data-bs-toggle="tab" 
+                                        data-bs-target="#gallery" type="button" role="tab">
+                                    <i class="fas fa-images"></i> แกลเลอรี่
+                                </button>
+                            </li>
+                        </ul>
+
+                        <form id="shareForm">
+                            <div class="mb-3">
+                                <label class="form-label">
+                                    <i class="fas fa-heading me-1"></i>หัวข้อ
+                                </label>
+                                <input type="text" class="form-control" id="titleInput" required
+                                       placeholder="ใส่หัวข้อที่ต้องการแบ่งปัน">
+                            </div>
+
+                            <!-- Tab Content -->
+                            <div class="tab-content" id="contentTypeTabsContent">
+                                <!-- Text Editor Tab -->
+                                <div class="tab-pane fade show active" id="text" role="tabpanel">
+                                    <div class="mb-3">
+                                        <label class="form-label">
+                                            <i class="fas fa-align-left me-1"></i>รายละเอียด
+                                        </label>
+                                        <textarea id="editor" class="form-control"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Whiteboard Tab -->
+                                <div class="tab-pane fade" id="whiteboard" role="tabpanel">
+                                    <div class="mb-3">
+                                        <div class="whiteboard-container">
+                                            <div class="whiteboard-tools">
+                                                <button type="button" class="btn btn-sm btn-outline-primary" id="penTool" title="ปากกา">
+                                                    <i class="fas fa-pen"></i> ปากกา
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-outline-primary" id="eraserTool" title="ยางลบ">
+                                                    <i class="fas fa-eraser"></i> ยางลบ
+                                                </button>
+                                                <input type="color" id="colorPicker" class="form-control form-control-sm" title="เลือกสี" value="#000000">
+                                                <select id="brushSize" class="form-select form-select-sm" title="ขนาดเส้น">
+                                                    <option value="1">1px</option>
+                                                    <option value="3">3px</option>
+                                                    <option value="5" selected>5px</option>
+                                                    <option value="8">8px</option>
+                                                    <option value="10">10px</option>
+                                                    <option value="15">15px</option>
+                                                </select>
+                                                <button type="button" class="btn btn-sm btn-outline-danger" id="clearCanvas" title="ล้างกระดาน">
+                                                    <i class="fas fa-trash"></i> ล้างกระดาน
+                                                </button>
+                                            </div>
+                                            <canvas id="whiteboardCanvas" class="whiteboard"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Gallery Tab -->
+                                <div class="tab-pane fade" id="gallery" role="tabpanel">
+                                    <div class="mb-3">
+                                        <div class="dropzone-container" id="imageDropzone">
+                                            <div class="dropzone-message">
+                                                <i class="fas fa-cloud-upload-alt"></i>
+                                                <p>ลากไฟล์มาวางที่นี่ หรือคลิกเพื่อเลือกไฟล์</p>
+                                                <small class="text-muted">รองรับไฟล์ภาพ JPG, PNG, GIF</small>
+                                            </div>
+                                            <input type="file" id="imageUpload" multiple accept="image/*" class="d-none">
+                                        </div>
+                                        <div class="image-preview" id="imagePreview">
+                                            <!-- Preview images will be added here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">
+                                        <i class="fas fa-folder me-1"></i>หมวดหมู่
+                                    </label>
+                                    <select class="form-select" id="categorySelect">
+                                        <option value="knowledge">ความรู้</option>
+                                        <option value="news">ข่าวสาร</option>
+                                        <option value="technology">เทคโนโลยี</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">
+                                        <i class="fas fa-tags me-1"></i>แท็ก
+                                    </label>
+                                    <input type="text" class="form-control" id="tagsInput" 
+                                           placeholder="พิมพ์แท็กและกด Enter">
+                                    <div id="tagsContainer" class="mt-2">
+                                        <!-- Tags will be added here -->
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-share"></i> แบ่งปัน
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shared Content -->
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fas fa-clock me-2"></i>โพสต์ล่าสุด
+                        </h5>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="searchInput" 
+                                   placeholder="ค้นหาโพสต์...">
+                        </div>
+                        <div id="sharedContent" class="shared-items">
+                            <!-- Dynamic content will be added here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>ShareHub</h5>
+                    <p class="text-muted">แพลตฟอร์มแบ่งปันความรู้และประสบการณ์</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-decoration-none me-3">เกี่ยวกับเรา</a>
+                        <a href="#" class="text-decoration-none me-3">ติดต่อ</a>
+                        <a href="#" class="text-decoration-none">นโยบายความเป็นส่วนตัว</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

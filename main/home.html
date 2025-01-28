@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก - ShareHub</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <i class="fas fa-share-alt me-2"></i>ShareHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">
+                            <i class="fas fa-home"></i> หน้าแรก
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-plus-circle"></i> แบ่งปันข้อมูล
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user"></i> โปรไฟล์
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+            <!-- Slide 1: AI & Technology -->
+            <div class="swiper-slide">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1677442136019-21780ecad995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YWl8fHx8fHwxNjk4MjU0NDcw&ixlib=rb-4.0.3&q=80&w=1920');">
+                    <div class="hero-content">
+                        <h2>ก้าวล้ำไปกับ AI</h2>
+                        <p>เรียนรู้และแบ่งปันเทคโนโลยี AI ที่กำลังเปลี่ยนแปลงโลก</p>
+                        <a href="#tech-section" class="btn btn-primary">อ่านเพิ่มเติม</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2: Learning -->
+            <div class="swiper-slide">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bGVhcm5pbmd8fHx8fHwxNjk4MjU0NTI4&ixlib=rb-4.0.3&q=80&w=1920');">
+                    <div class="hero-content">
+                        <h2>เรียนรู้ไปด้วยกัน</h2>
+                        <p>แบ่งปันความรู้และประสบการณ์เพื่อการเติบโตร่วมกัน</p>
+                        <a href="#knowledge-section" class="btn btn-primary">เริ่มเรียนรู้</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3: Community -->
+            <div class="swiper-slide">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29tbXVuaXR5fHx8fHx8MTY5ODI1NDU3Mg&ixlib=rb-4.0.3&q=80&w=1920');">
+                    <div class="hero-content">
+                        <h2>ชุมชนแห่งการแบ่งปัน</h2>
+                        <p>ร่วมเป็นส่วนหนึ่งของชุมชนที่พร้อมเติบโตไปด้วยกัน</p>
+                        <a href="index.html" class="btn btn-primary">เริ่มแบ่งปัน</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Category Tabs -->
+        <ul class="nav nav-tabs mb-4" id="contentTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="trending-tab" data-bs-toggle="tab" 
+                        data-bs-target="#trending" type="button" role="tab">
+                    <i class="fas fa-fire"></i> กำลังได้รับความนิยม
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="knowledge-tab" data-bs-toggle="tab" 
+                        data-bs-target="#knowledge" type="button" role="tab">
+                    <i class="fas fa-book"></i> ความรู้
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tech-tab" data-bs-toggle="tab" 
+                        data-bs-target="#tech" type="button" role="tab">
+                    <i class="fas fa-microchip"></i> เทคโนโลยี
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="news-tab" data-bs-toggle="tab" 
+                        data-bs-target="#news" type="button" role="tab">
+                    <i class="fas fa-newspaper"></i> ข่าวสาร
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="contentTabsContent">
+            <!-- Trending Tab -->
+            <div class="tab-pane fade show active" id="trending" role="tabpanel">
+                <div class="row">
+                    <!-- Trending Item 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="content-card">
+                            <div class="content-card-image">
+                                <img src="https://images.unsplash.com/photo-1682687220363-35e4621ed990?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YWl8fHx8fHwxNjk4MjU0NjQ2&ixlib=rb-4.0.3&q=80&w=400" alt="AI and Future">
+                            </div>
+                            <div class="content-card-body">
+                                <h5 class="content-card-title">AI กับอนาคตของการทำงาน</h5>
+                                <p class="content-card-text">เรียนรู้ว่า AI จะเปลี่ยนแปลงรูปแบบการทำงานในอนาคตอย่างไร</p>
+                                <div class="content-card-meta">
+                                    <span><i class="fas fa-user"></i> John Doe</span>
+                                    <span><i class="fas fa-calendar"></i> 15 ต.ค. 2024</span>
+                                </div>
+                                <div class="content-card-stats">
+                                    <span><i class="fas fa-eye"></i> 1.5K</span>
+                                    <span><i class="fas fa-heart"></i> 245</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trending Item 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="content-card">
+                            <div class="content-card-image">
+                                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bGVhcm58fHx8fHwxNjk4MjU0Njkx&ixlib=rb-4.0.3&q=80&w=400" alt="Learning Methods">
+                            </div>
+                            <div class="content-card-body">
+                                <h5 class="content-card-title">เทคนิคการเรียนรู้ยุคใหม่</h5>
+                                <p class="content-card-text">วิธีการเรียนรู้ที่มีประสิทธิภาพสำหรับยุคดิจิทัล</p>
+                                <div class="content-card-meta">
+                                    <span><i class="fas fa-user"></i> Jane Smith</span>
+                                    <span><i class="fas fa-calendar"></i> 14 ต.ค. 2024</span>
+                                </div>
+                                <div class="content-card-stats">
+                                    <span><i class="fas fa-eye"></i> 1.2K</span>
+                                    <span><i class="fas fa-heart"></i> 180</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trending Item 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="content-card">
+                            <div class="content-card-image">
+                                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8dGVjaG5vbG9neXx8fHx8fDE2OTgyNTQ3MzU&ixlib=rb-4.0.3&q=80&w=400" alt="Tech Trends">
+                            </div>
+                            <div class="content-card-body">
+                                <h5 class="content-card-title">เทรนด์เทคโนโลยี 2024</h5>
+                                <p class="content-card-text">อัพเดทเทรนด์เทคโนโลยีล่าสุดที่กำลังเปลี่ยนแปลงโลก</p>
+                                <div class="content-card-meta">
+                                    <span><i class="fas fa-user"></i> Tech Expert</span>
+                                    <span><i class="fas fa-calendar"></i> 13 ต.ค. 2024</span>
+                                </div>
+                                <div class="content-card-stats">
+                                    <span><i class="fas fa-eye"></i> 2K</span>
+                                    <span><i class="fas fa-heart"></i> 300</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Knowledge Tab -->
+            <div class="tab-pane fade" id="knowledge" role="tabpanel">
+                <div class="row" id="knowledgeContent">
+                    <!-- Knowledge content will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Tech Tab -->
+            <div class="tab-pane fade" id="tech" role="tabpanel">
+                <div class="row" id="techContent">
+                    <!-- Tech content will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- News Tab -->
+            <div class="tab-pane fade" id="news" role="tabpanel">
+                <div class="row" id="newsContent">
+                    <!-- News content will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+   <!-- Footer -->
+   <footer class="bg-light py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>ShareHub</h5>
+                <p class="text-muted">แพลตฟอร์มแบ่งปันความรู้และประสบการณ์</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="mb-0">
+                    <a href="#" class="text-decoration-none me-3">เกี่ยวกับเรา</a>
+                    <a href="#" class="text-decoration-none me-3">ติดต่อ</a>
+                    <a href="#" class="text-decoration-none">นโยบายความเป็นส่วนตัว</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- Home page specific JS -->
+<script>
+    // Initialize Swiper
+    const heroSlider = new Swiper('.hero-slider', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Sample data for different categories
+    const categoryData = {
+        knowledge: [
+            {
+                title: 'เทคนิคการเรียนรู้ออนไลน์',
+                description: 'วิธีการเรียนรู้ออนไลน์ให้มีประสิทธิภาพสูงสุด',
+                image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bGVhcm5pbmd8fHx8fHwxNjk4MjU0ODY3&ixlib=rb-4.0.3&q=80&w=400',
+                author: 'Learning Expert',
+                date: '12 ต.ค. 2024',
+                views: 850,
+                likes: 120
+            },
+            {
+                title: 'พื้นฐานการเขียนโค้ด',
+                description: 'เริ่มต้นเขียนโค้ดสำหรับผู้เริ่มต้น',
+                image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTY5ODI1NDg5OQ&ixlib=rb-4.0.3&q=80&w=400',
+                author: 'Code Master',
+                date: '11 ต.ค. 2024',
+                views: 1200,
+                likes: 180
+            }
+        ],
+        tech: [
+            {
+                title: 'อนาคตของ Web 3.0',
+                description: 'เทคโนโลยีที่จะเปลี่ยนแปลงอินเทอร์เน็ต',
+                image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8dGVjaHx8fHx8fDE2OTgyNTQ5MzA&ixlib=rb-4.0.3&q=80&w=400',
+                author: 'Tech Guru',
+                date: '10 ต.ค. 2024',
+                views: 1500,
+                likes: 230
+            },
+            {
+                title: 'IoT ในชีวิตประจำวัน',
+                description: 'การประยุกต์ใช้ IoT ในบ้านและที่ทำงาน',
+                image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8aW90fHx8fHx8MTY5ODI1NDk2MA&ixlib=rb-4.0.3&q=80&w=400',
+                author: 'IoT Specialist',
+                date: '9 ต.ค. 2024',
+                views: 980,
+                likes: 150
+            }
+        ],
+        news: [
+            {
+                title: 'เทรนด์เทคโนโลยี 2025',
+                description: 'ทิศทางเทคโนโลยีในปีหน้า',
+                image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8dGVjaG5vbG9neXx8fHx8fDE2OTgyNTQ5OTM&ixlib=rb-4.0.3&q=80&w=400',
+                author: 'Tech Reporter',
+                date: '8 ต.ค. 2024',
+                views: 2000,
+                likes: 300
+            },
+            {
+                title: 'การพัฒนา AI ล่าสุด',
+                description: 'ความก้าวหน้าของ AI ในปัจจุบัน',
+                image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YWl8fHx8fHwxNjk4MjU1MDIy&ixlib=rb-4.0.3&q=80&w=400',
+                author: 'AI Expert',
+                date: '7 ต.ค. 2024',
+                views: 1800,
+                likes: 270
+            }
+        ]
+    };
+
+    // Function to create content card
+    function createContentCard(item) {
+        return `
+            <div class="col-md-4 mb-4">
+                <div class="content-card">
+                    <div class="content-card-image">
+                        <img src="${item.image}" alt="${item.title}">
+                    </div>
+                    <div class="content-card-body">
+                        <h5 class="content-card-title">${item.title}</h5>
+                        <p class="content-card-text">${item.description}</p>
+                        <div class="content-card-meta">
+                            <span><i class="fas fa-user"></i> ${item.author}</span>
+                            <span><i class="fas fa-calendar"></i> ${item.date}</span>
+                        </div>
+                        <div class="content-card-stats">
+                            <span><i class="fas fa-eye"></i> ${item.views}</span>
+                            <span><i class="fas fa-heart"></i> ${item.likes}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Function to load content for each tab
+    function loadTabContent(category) {
+        const content = categoryData[category];
+        const container = document.getElementById(`${category}Content`);
+        if (container) {
+            container.innerHTML = content.map(item => createContentCard(item)).join('');
+        }
+    }
+
+    // Initialize content when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        // Load initial content for all tabs
+        ['knowledge', 'tech', 'news'].forEach(category => {
+            loadTabContent(category);
+        });
+
+        // Add tab change event listeners
+        const tabs = document.querySelectorAll('[data-bs-toggle="tab"]');
+        tabs.forEach(tab => {
+            tab.addEventListener('shown.bs.tab', (event) => {
+                const target = event.target.getAttribute('data-bs-target').replace('#', '');
+                if (categoryData[target]) {
+                    loadTabContent(target);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

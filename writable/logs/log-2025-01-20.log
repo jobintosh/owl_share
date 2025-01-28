@@ -1,0 +1,78 @@
+CRITICAL - 2025-01-20 23:31:36 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:39:30 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:40:20 --> Class 'App\Http\Controllers\BaseController' not found
+#0 /var/www/html/owl_share/system/Autoloader/Autoloader.php(294): include_once()
+#1 /var/www/html/owl_share/system/Autoloader/Autoloader.php(265): CodeIgniter\Autoloader\Autoloader->includeFile('/var/www/html/o...')
+#2 /var/www/html/owl_share/system/Autoloader/Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#4 [internal function]: spl_autoload_call('App\\Controllers...')
+#5 /var/www/html/owl_share/system/CodeIgniter.php(893): class_exists('\\App\\Controller...', true)
+#6 /var/www/html/owl_share/system/CodeIgniter.php(417): CodeIgniter\CodeIgniter->startController()
+#7 /var/www/html/owl_share/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/owl_share/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2025-01-20 23:41:19 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:41:32 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:41:48 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:43:10 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:43:44 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:45:30 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2025-01-20 23:45:33 --> Invalid email format: 
+CRITICAL - 2025-01-20 23:46:18 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2025-01-20 23:46:21 --> Invalid email format: 
+CRITICAL - 2025-01-20 23:46:30 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:46:59 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2025-01-20 23:47:41 --> Invalid email format: 
+CRITICAL - 2025-01-20 23:48:47 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2025-01-20 23:48:50 --> Invalid email format: 
+CRITICAL - 2025-01-20 23:49:39 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:49:59 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:51:58 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:52:16 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:52:31 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:55:01 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:56:29 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:56:40 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-01-20 23:58:25 --> Cannot declare class App\Controllers\Auth, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

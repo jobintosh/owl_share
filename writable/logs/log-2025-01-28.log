@@ -1,0 +1,12 @@
+CRITICAL - 2025-01-28 00:26:48 --> Too few arguments to function App\Controllers\Profile::view(), 0 passed in /var/www/html/owl_share/system/CodeIgniter.php on line 936 and exactly 1 expected
+#0 /var/www/html/owl_share/system/CodeIgniter.php(936): App\Controllers\Profile->view()
+#1 /var/www/html/owl_share/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#2 /var/www/html/owl_share/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/owl_share/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2025-01-28 15:14:14 --> Too few arguments to function App\Controllers\Profile::view(), 0 passed in /var/www/html/owl_share/system/CodeIgniter.php on line 936 and exactly 1 expected
+#0 /var/www/html/owl_share/system/CodeIgniter.php(936): App\Controllers\Profile->view()
+#1 /var/www/html/owl_share/system/CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#2 /var/www/html/owl_share/system/CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /var/www/html/owl_share/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
